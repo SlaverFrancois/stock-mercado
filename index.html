@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista General de Stock</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f6f9;
+  margin:0;
+  padding:10px;
+  font-size:14px;
+}
+
+h1{
+  text-align:center;
+  font-size:20px;
+  margin-bottom:15px;
+}
+
+.section{
+  margin-bottom:20px;
+}
+
+.section-title{
+  background:#2c3e50;
+  color:white;
+  padding:8px;
+  border-radius:4px;
+  font-weight:bold;
+  font-size:15px;
+  margin-bottom:10px;
+}
+
+.group-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap:8px;
+}
+
+.group{
+  background:white;
+  padding:6px;
+  border-radius:4px;
+}
+
+.group h4{
+  margin:0 0 6px 0;
+  font-size:13px;
+  border-bottom:1px solid #ddd;
+  padding-bottom:3px;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+li{
+  padding:4px 6px;
+  margin-bottom:2px;
+  border-radius:3px;
+  cursor:pointer;
+  transition: background 0.2s ease;
+}
+
+li:hover{
+  background:#e8e8e8;
+}
+
+li.selected{
+  background:#d3d3d3;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Lista General de Stock</h1>
+
+<div class="section">
+  <div class="section-title">🧊 Refrigeradora</div>
+  <div class="group-container">
+
+    <div class="group">
+      <h4>Lácteos</h4>
+      <ul>
+        <li>Leche</li>
+        <li>Queso</li>
+        <li>Mantequilla</li>
+        <li>Yogurt</li>
+        <li>Crema de leche</li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Carnes</h4>
+      <ul>
+        <li>Carne de res</li>
+        <li>Pollo</li>
+        <li>Carne molida</li>
+        <li>Chuletas</li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Verduras</h4>
+      <ul>
+        <li>Tomate</li>
+        <li>Lechuga</li>
+        <li>Zanahoria</li>
+        <li>Apio</li>
+        <li>Cebolla</li>
+        <li>Ajo</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">🍳 Cocina</div>
+  <div class="group-container">
+
+    <div class="group">
+      <h4>Granos</h4>
+      <ul>
+        <li>Arroz</li>
+        <li>Avena</li>
+        <li>Quinua</li>
+        <li>Fideos</li>
+        <li>Harina</li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Especias</h4>
+      <ul>
+        <li>Comino</li>
+        <li>Pimienta</li>
+        <li>Orégano</li>
+        <li>Ají en polvo</li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Limpieza</h4>
+      <ul>
+        <li>Detergente</li>
+        <li>Esponjas</li>
+        <li>Papel toalla</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-title">🚿 Baño</div>
+  <div class="group-container">
+
+    <div class="group">
+      <h4>Higiene</h4>
+      <ul>
+        <li>Papel higiénico</li>
+        <li>Jabón</li>
+        <li>Shampoo</li>
+        <li>Pasta dental</li>
+        <li>Desodorante</li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Botiquín</h4>
+      <ul>
+        <li>Alcohol</li>
+        <li>Algodón</li>
+        <li>Curitas</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script>
+document.querySelectorAll("li").forEach(item => {
+  item.addEventListener("click", function(){
+    this.classList.toggle("selected");
+  });
+});
+</script>
+
+</body>
+</html>
